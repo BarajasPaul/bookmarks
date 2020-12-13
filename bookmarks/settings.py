@@ -26,19 +26,23 @@ SECRET_KEY = '@%9&2lmgsd#a^ed*%mb$_-f+(gpxsajjm4gx1+0hwc$=s^pi*@'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['mysite.com', 'localhost', '127.0.0.1']
 
 
 # Application definition
 
 INSTALLED_APPS = [
     'account.apps.AccountConfig',
+    'images.apps.ImagesConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'easy_thumbnails',
+    'django_extensions',
+    'social_django',
 ]
 
 MIDDLEWARE = [
