@@ -35,8 +35,6 @@ ALLOWED_HOSTS = ['mysite.com', 'localhost', '127.0.0.1']
 
 INSTALLED_APPS = [
     'account.apps.AccountConfig',
-    'images.apps.ImagesConfig',
-    'actions.apps.ActionsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -46,6 +44,8 @@ INSTALLED_APPS = [
     'easy_thumbnails',
     'django_extensions',
     'social_django',
+    'images.apps.ImagesConfig',
+    'actions.apps.ActionsConfig',
 ]
 
 MIDDLEWARE = [
@@ -149,3 +149,8 @@ ABSOLUTE_URL_OVERRIDES = {
     'auth.user': lambda u: reverse_lazy('user_detail',
                                         args=[u.username])
 }
+
+REDIS_HOST = '0.0.0.0'
+REDIS_PORT = 6379
+REDIS_DB = 0
+
